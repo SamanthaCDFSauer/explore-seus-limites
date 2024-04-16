@@ -1,0 +1,326 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: 'Mulish', sans-serif;
+    font-size: 62.5%;
+    --color-base-white: #FFFFFF;
+    --color-base-light-gray: #F9F4FB;
+    --color-base-pink: #B52184;
+    --color-base-blue: #312D64;
+    --color-base-dark-blue: rgb(48,44,99);
+    --color-base-purple: rgb(99,59,188);
+}
+
+header {
+    background-color: var(--color-base-light-gray);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 3rem;
+}
+
+@media (min-width: 430px) {
+    header {
+        flex-direction: row-reverse;
+        place-content: center;
+        max-height: 732px;
+    }
+}
+
+header .header {
+    padding: 1rem 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 430px) {
+    header .header {
+        flex: 1;
+        padding-left: 8rem;
+        align-items: start;
+    }
+}
+
+header .background {
+    width: 100%;
+    height: 370px;
+    background: url('./assets/astronaut.svg') no-repeat;
+    background-size: contain;
+}
+
+@media (min-width: 430px) {
+    header .background {
+        flex: 1;
+        height: 732px;
+    }
+}
+
+header .header h1 {
+    color: var(--color-base-pink);
+    font-size: 3.2rem;
+    line-height: 4.0rem;
+    font-weight: 900;
+}
+
+@media (min-width: 430px) {
+    header .header h1 {
+        font-size: 5.8rem;
+        line-height: 7.0rem;
+        font-weight: 800;
+    }
+}
+
+header .header h2 {
+    color: var(--color-base-blue);
+    font-size: 2.0rem;
+    line-height: 2.5rem;
+    font-weight: 600;
+}
+
+
+@media (min-width: 430px) {
+    header .header h2 {
+        font-size: 3.2rem;
+        line-height: 4.0rem;
+    }
+}
+
+header .header button {
+    all: unset;
+    cursor: pointer;
+    margin: 4rem 0 8rem 0;
+}
+
+@media (min-width: 430px) {
+    header .header button {
+        margin: 10rem 0 0 0;
+    }
+}
+
+
+
+
+h2 {
+    color: var(--color-base-pink);
+    font-size: 3.0rem;
+    line-height: 4.0rem;
+    font-weight: 900;
+}
+
+main {
+    background-color: var(--color-base-dark-blue);
+    background: linear-gradient(0deg, rgba(48,44,99,1) 0%, rgba(52,49,147,1) 100%);
+}
+
+.div-wrapper {
+    padding: 5.0rem 4.0rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 5.0rem;
+}
+
+.main-wrapper {
+    background-color: var(--color-base-white);
+    border-radius: 2.0rem;
+    padding: 2.6rem;
+}
+
+.main-wrapper img {
+    width: 8.0rem;
+    height: 8.0rem;
+    margin-bottom: 3.0rem;
+}
+
+.main-wrapper h2 {
+    margin-bottom: 2.0rem;
+}
+
+.main-wrapper p {
+    font-size: 1.6rem;
+    line-height: 2.0rem;
+    font-weight: 600;
+    color: var(--color-base-blue);
+}
+
+fieldset {
+    border: none;
+    padding: 3rem 0 0 2rem;
+}
+
+@media (min-width: 430px) {
+    fieldset {
+        border: none;
+        padding: 10rem 0 0 10rem;
+    }
+}
+
+.fieldset-wrapper {
+    background-color: var(--color-base-light-gray);
+    display: flex;
+    flex-direction: column;
+}
+
+.fieldset-wrapper legend {
+    color: var(--color-base-pink);
+    font-size: 3.2rem;
+    line-height: 4.0rem;
+    font-weight: 900;
+    padding-bottom: 3rem;
+}
+
+#user {
+    background-image: url(./assets/person.svg);
+    background-repeat: no-repeat;
+    background-position: 12px;
+}
+
+#at {
+    background-image: url(./assets/at.svg);
+    background-repeat: no-repeat;
+    background-position: 12px;
+}
+
+.fieldset-wrapper input, textarea {
+    all: unset;
+    color: var(--color-base-blue);
+    font-size: 1.6rem;
+    border: 2px solid var(--color-base-blue);
+    border-radius: 8px;
+    width: 350px;
+    height: 48px;
+    box-sizing: border-box;
+    font-weight: 600;
+}
+
+.fieldset-wrapper input {
+    padding-left: 40px;
+}
+
+.fieldset-wrapper textarea {
+    padding: 16px;
+}
+
+.fieldset-wrapper input::placeholder {
+    color: var(--color-base-blue);
+
+}
+
+.fieldset-wrapper textarea::placeholder {
+    color: var(--color-base-blue); 
+}
+
+.form-wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.4rem;
+}
+
+
+
+
+
+
+
+form {
+    background-color: var(--color-base-light-gray);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#message {
+    height: 126px;
+}
+
+fieldset button {
+    font-family: 'Mulish', sans-serif;
+    background-color: var(--color-base-dark-blue);
+    color: var(--color-base-white);
+    padding: 16px;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 2.4rem;
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    width: 170px;
+    margin-bottom: 6.5rem;
+}
+   
+fieldset button:hover {
+    background-color: #25224b;
+}
+
+.bck-wrapper {
+    flex: 1;
+    background-image: url(./assets/bckdesktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    display: none;
+}
+
+
+footer {
+    background: var(--color-base-purple);
+    background: linear-gradient(90deg, rgba(99,59,188,1) 0%, rgba(48,44,99,1) 100%);
+    width: 100%;
+    height: 8.0rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer p {
+    font-size: 2.0rem;
+    line-height: 2.4rem;
+    color: var(--color-base-white);
+    font-weight: 600;
+    padding: 16px;
+}
+
+@media (min-width: 430px) {
+
+    .main-wrapper {
+        max-width: fit-content;
+        max-height: fit-content;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+
+    .main-wrapper h2 {
+        font-size: 3.5rem;
+    }
+
+    .main-wrapper p {
+        font-size: 2.0rem;
+        line-height: 2.4rem;
+    }
+
+    .fieldset-wrapper legend {
+        font-size: 4.2rem;
+        line-height: 5.0rem;
+    }
+
+    .fieldset-wrapper {
+        width: 100%;
+    }
+
+    .fieldset-wrapper input, textarea {
+        width: 100%;
+    }
+
+    .bck-wrapper {
+        display: inline-block;
+        max-width: 64.4rem;
+        height: auto;
+    }
+}
